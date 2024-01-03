@@ -1,0 +1,47 @@
+﻿<Window x:Class="BubbleLabelExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BubbleLabelExample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800" Background="#F5F5F5">
+    <StackPanel Margin="10">
+        <StackPanel.Resources>
+            <Style TargetType="WrapPanel">
+                <Setter Property="Margin"
+                        Value="0,5,0,0" />
+            </Style>
+            <Style TargetType="Image">
+                <Setter Property="Width"
+                        Value="40" />
+                <Setter Property="Margin"
+                        Value="5,0,5,0" />
+                <Setter Property="VerticalAlignment"
+                        Value="Top" />
+            </Style>
+        </StackPanel.Resources>
+        <WrapPanel>
+            <Image Source="/Assets/Images/gpt.png" />
+            <local:BubbleLabel Background="White"
+                               Content="How do I find the Carmen Sandiego game?"/>
+        </WrapPanel>
+        <WrapPanel HorizontalAlignment="Right">
+            <local:BubbleLabel Position="Right"
+                               Background="#89d961"
+                               Content="&quot;Where on Google Earth is Carmen Sandiego&quot; can be found within Voyager within the Games tab.  Just click on the Voyager ship wheel icon, then Games, and then Where on Google Earth is Carmen Sandiego"/>
+            <Image Source="/Assets/Images/me.png" />
+        </WrapPanel>
+        <WrapPanel>
+            <Image Source="/Assets/Images/gpt.png" />
+            <local:BubbleLabel  Background="White"
+                                Content="Why did you make the new Google Earth a web app?" />
+        </WrapPanel>
+        <WrapPanel HorizontalAlignment="Right">
+            <local:BubbleLabel Position="Right"
+                               Background="#89d961"
+                               Content="Classic desktop Earth must be downloaded and installed on your Windows, Mac or Linux computer. "/>
+            <Image Source="/Assets/Images/me.png" />
+        </WrapPanel>
+    </StackPanel>
+</Window>
